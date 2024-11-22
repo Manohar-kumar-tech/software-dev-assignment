@@ -1,0 +1,7 @@
+1. LIST : Ordered collection of items that is mutable // list = [1, 2 "agdffgfg"]
+
+
+2. Dictionary : key-value pairs mutable // dic = {1:"value1", "key2":"value2"}
+
+
+3. Tuple : immutable sequence of items // tup = (1, 2, "abc", )
