@@ -3,11 +3,13 @@ def factorial(num):
     if num < 0:
         print("Negative number does not have factorial.")
     elif num ==0 or num == 1:
-        print(F"factorial of number {num} is 0")
+        return 1
     else:
         for i in range (1, num +1):
             fact *= i
-        return print(F"The facorail of number {num} is {fact}")
+        return fact
 
 num = int(input("Enter a Number to get factorial: "))
-print(factorial(num))
+result = factorial(num)
+
+print(f"The factorial of number {num} is {result}")
