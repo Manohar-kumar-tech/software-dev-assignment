@@ -1,4 +1,3 @@
-num = int(input("Enter a number to check: "))
 
 def check(num):
     if num > 0:
@@ -8,4 +7,9 @@ def check(num):
     else:
         print(F"{num} is zero")
 
-check(num)
+try:
+    num = int(input("Enter a number to check: "))
+    check(num)
+except:
+    print("Invalid input! Please try again")
+    exit()
