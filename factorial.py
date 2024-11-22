@@ -1,6 +1,3 @@
-num = int(input("Enter a Number to get factorial: "))
-
-
 def factorial(num):
     fact = 1
     if num < 0:
@@ -12,5 +9,5 @@ def factorial(num):
             fact *= i
         return print(F"The facorail of number {num} is {fact}")
 
-
+num = int(input("Enter a Number to get factorial: "))
 print(factorial(num))
