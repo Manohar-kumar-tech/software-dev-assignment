@@ -1,0 +1,28 @@
+modes
+    1. r - to open in read mode only ? file must exist else error
+    2. w - open file for writing ? create file if it doesn't exist
+    3. a - open file for appennding ? create new file if it doesn't exist, add new content without overwrites existing.
+    4. r+ - open file to read and write mode ? file must exist
+    5. w+ - open a file for writing and reading ? create a file or verwrites exisitng content
+    6. a+ - open a file for appending and reading ? create file if not exist || allow reading appending without overwriting
+    7. b - binary mode use with any of the above modes e.g. (rb, wb, ...)
+    8. t - text mode it is default mode. e.g. (rt, wt)
+
+
+methods 
+    1. open // file = open('filename.txt', 'mode')  || alias // with open('filename.txt', 'mode') as file
+    2. close - close the file and release resource  // file.close()
+    3. reading methods
+        1. read(size) - read entire file upto the size
+        2. readline() - read one line at a time
+        3. readlines() - reads all lines and return a list
+    4. Writing methods
+        1. write(String) - write a string to the file
+        2. writelines(list) - write a list of string to the file
+    5. file pointer 
+        1. seek(offset, whence) - move the file pointer to the specific position
+        2. tell() - return the current position of the pointer
+
+    6. More methods
+        1. flush() - ensures data is written to the disk immediatly
+        2. truncate(size) - truncate the file to the specific size 
