@@ -1,0 +1,9 @@
+1. What is exception handling : Mechanism to catch and manage runtime errors
+
+keywords.
+    1. try - Block of code test for error
+    2. except - block of code execute when error occurs
+    3. else - execute if no exception occurs
+    4. finally - executes code regardless of whether an exception occured
+
+// task to write a program to division by zero.
