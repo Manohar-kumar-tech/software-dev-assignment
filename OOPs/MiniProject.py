@@ -1,6 +1,6 @@
 # Library Management System   - A system to manage book and user in a labrary
 
-# Features
+# Features (Extended and with persistence)
 #     1. Add book to the library
 #     2. Borrow book for a user
 #     3. Return book and update availability
@@ -11,8 +11,10 @@
 # 2. book class  // indivisual book with attributes title, author, and availability
 # 3. User class // user who can borrow a book
 
-
 # programm
+from datetime import datetime
+import json
+
 
 class Book():
     def __init__(self, title, author):
@@ -52,6 +54,7 @@ class User():
 class Library():
     def __init__(self):
         self.books = []
+        self.transactions = []
         
     def addBook(self, book):
         if book:
@@ -60,17 +63,40 @@ class Library():
             print(f"Added {book.title} by {book.author} to the library")
         else:
             print("You haven't added book. Try again ...")
-            
-        
-        
+               
     
     def displayBooks(self):
         print("\nLibrary Books: ")
         for book in self.books:
             print(book)
             
-    def transactionHistory(self):
-        print("This Fuctionality is in under development")
+    def record_tarnsaction(self, user, book, action):
+        self.transactions.append({
+            "user" : user.name,
+            "book" : book.title,
+            "action": action,
+            "time" : datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        })
+    
+    
+    def displayTransaction(self):
+        print("\Tansaction History.")
+        for txn in self.transactions:
+            print(f"{txn['time']}- {txn['user']} {txn['action']} '{txn['book']}")
+            
+    def saveData(self, filename):
+        with open(filename, 'w') as file:
+            data = {"books":[book.__dict__ for book in self.books], "tarnsactions": self.transactions }
+            json.dump(data, file)
+            
+    def loadData(self, filename):
+        try:
+            with open(filename, 'r') as file:
+                data = json.load(file)
+                self.books = [Book(**book) for book in data['books']]
+                self.transactions = data['transactions']
+        except FileNotFoundError:
+            print("No saved data found")
         
         
 
@@ -104,4 +130,3 @@ user1.returnBook(book2)
 user1.returnBook(book1)
 
 library.displayBooks()
-library.transactionHistory()

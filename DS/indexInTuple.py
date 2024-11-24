@@ -4,7 +4,6 @@ def findIndex(element, tuple):
             return i
     return -1
     
-    
 
 t = (1, 2, 10, 20, 30, 40)
 target =30 
