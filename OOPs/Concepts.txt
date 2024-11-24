@@ -1,0 +1,37 @@
+Working with class and objects.
+
+understanding of object-oriented programming (OOP) is essential for real world sofrtware development.
+python supports classes and objects, which allow you to model real world entities.
+
+Concepts 
+    1. Class: - A blueprint for creating objects(instances)
+    2. object: - An intance of class.
+    3. Attributes: - Data stored in an object (variable)
+    4. Constructor: - The __init__(): - method to initialize Attributes.
+
+
+tasks ---- you know what you wants then do it.
+
+
+
+
+Pillars of OOPs.
+    1. Encpsulation: - Wrapping the data (Attributes) and methods into a single unit(class). it allow the hiding the internal details of an object and exposing only neccesary parts. 
+
+    e.g. you can only interact with car engine through its start() method, not by directly accessing the engine.
+
+
+
+    2. Inharitance: - creating a new class (child class) that inherits properties and method from an existing class (parent class)
+
+    e.g. A Truck class can inherit from a Car class, but with additional Attributes like cargo_capacity.
+
+
+
+    3. Polymorphism: - The ability of different classes to be treated as instances of same class through inheritance. it also allow methods to behave differently based on the object. //     n  1.verloading 2. overriding
+
+
+
+    4. Abstarction: Hiding complex implementation details and showing only necessary features.
+
+    e.g You don't need to know the internal working of car engine in order to drive it. you just use start() method.
