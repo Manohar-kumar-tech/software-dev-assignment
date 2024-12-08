@@ -1,0 +1,7 @@
+LLD Structure
+    1. Understand the Problem (Reshaded): Define the requirements and constrints 
+        1.1 Requirements of Two type Functionals and Non-Functionals
+    2. Model Relationships (UML): Create Relationships between Classes and objects - Sequence diagrams
+    3. Design Methods: Define behaviour (methods) that interact meaningfully
+    4. Implement and Extend (Design Pattern) : 
+    5. Practice Projects (Test)

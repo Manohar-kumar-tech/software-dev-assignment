@@ -1,0 +1,314 @@
+Table of contents........
+    1. Basic datatype
+    2. OOPs concepts in python
+    3. String handling functions
+    4. Controll statements, functions in python
+    5. Special datatypes in python
+    6. lambda functions, list comprehensions
+    7. Libraries used for data science: pandas, numpy, seaborn, matplotlib
+    8. Types of plots in seaborn and matplotlib and their usages
+    9. Library for machine learning: Scikit-Learn
+
+
+
+
+Topics
+    1. Basic datatype
+    Q: What are basic data types in python
+    Ans: Basic data types in python are:
+        1. Integer: -represent whole numbers
+        2. Float: - represent decimal numbers
+        3. String: -represents sequence of characters
+        4. Boolean: -represents either True and False
+        5. List: represents an order collections of elements
+    
+    Q: How do you convert a string to an integer in python?
+    Ans: You can use int() function to convert string to integer
+    e.g. -
+        // num_str = "10"
+        // num_int = int(num_str)
+
+    Q: How do you check datatype of a variable in python?
+    Ans: you can use type() function to check data type of a variable
+    e.g. 
+        // num = 21
+        // print(type(num)) # int data type
+
+    Q: What is difference between list and tuple in python?
+    Ans: A list is mutable, which means you can modify its elements, while a tuple is immutable, meaning its elements can not be changed after creation.
+
+    Q: How do you create empty dictionary in python?
+    Ans: you can create empty dictionary using either the curly braces {} or the dict() functions.
+    e.g.
+        // empty_dict = {}
+        // empty_dict = dict()
+
+
+2. OOPs concepts in python
+
+    Q: What is OOP? And how it is implemented in python?
+    Ans: Object-oriented-programming is programming paradigms that uses object to represent real-world entities. In python OOP is implemented through classes and objects, Classes are blue print to create objects, and objects are intance of classes.
+
+    Q: What are four principles of OOPs?
+    Ans: The four principles of OOP are?
+
+    1. Encapsulation: Binding of data and methods that operate on that data within a single unit(class).
+
+    2. Inheritnce: ability of class to in harit properties and methods from its parents class.
+
+    3. Polymorphism: ability of an object to take on different forms or behavior based on the context.
+
+    4. Abstarct: representing essentials features and hiding unneccesary details to simplify the complexity.
+
+    Q: What is method overloading in python?
+    Ans: Method overloading in python refers to deafining multiple methods  with the same name but different parameters within class. However, python does not supports method overloading by defualt as it does support in language like java. In python, you can similar effect by using default arguements or using variable-length arguement.
+
+    Q: What is method overriding in python?
+    Ans: Method overriding in python refers to defining a method in a child class that already exists in its parent class with the same name and signature. The method in the child class overrides the method in the parents class, providing a different implementation.
+
+    Q: What is difference between a class method and an intance method in python?
+    Ans: A class methodn is a method bound to the and not to the intance of the class. It is deifined using @classmethod decorator and can access only class level variable. On the other hand, an intance method is bound to the instance of the class and can access both instance and class level variable.
+
+
+3. String handling functions
+
+    Q: How do you concatenate two string in python
+    Ans: You can concatenate two string using + oprator
+    e.g.
+        // str1 = "hello"
+        // str2 = "Manohar"
+        // concated = str1 + str2
+        // print(concated) # helloManohar
+
+    Q: how do you find length of string in python?
+    Ans: You can use len() function to find the length of  a string>
+    e.g. 
+        // str = "Hello Dosto"
+        // print(len(str)) # 11
+
+    Q: How do you convert string to uppercase in python?
+    Ans: You can the upper() method to convert a string to uppercase.
+    e.g. 
+        // str = "hello"
+        // upper_str = str.upper()
+        // print(upper_str) # Hello
+
+    Q: How do you split a sring into a list of substring in python?
+    Ans: You can use the split() method to split a string into a list of substrings based on a delimiter.
+    e.g. 
+        // str = "Helloo,Dosto"
+        // sub_str = str.split(",") # ["Helloo", "Dosto"]
+
+    Q: How do you check if a string contains a specific substring in python?
+    Ans: You can use in keyword to check if a substring is present in a string.
+    e.g.
+        // str = "Hello Dosto"
+        // is_present = "Dosto" in str # True
+
+
+4. Controll statements, functions in python
+
+    Q: What are control statements in python?
+    Ans: Control statements are used to control the flow of execution in programm. Common control statementsin python are 1. if-else, 2. for loop, 3. while loop, and 4. break/continue statements
+
+
+    Q: How do you write an if-else statement in python?
+    Ans: An if-else statement in python isd written using the following.
+
+    // if condition:
+    //      # if statement true
+    // else:
+    //      # if condition is false
+
+    Q: How do you define function in python?
+    Ans: A function in python is defined using def keyword.
+    e.g.
+        def func():
+            print("Kuch Bhi ...")
+
+    Q: How do you pass arguements to a function in python?
+    Ans: You can pass arguements to a function by including them inside the parantheses when defining the function.
+    e.g. 
+        def func(para):
+            print("kuch v with para/pari... ha ha haa")
+
+    Q: How do you return value from a function in Python?
+    Ans: You can use the return keyword to return a value from a function.
+    e.g.
+        def add(a, b):
+            return a+b
+
+
+5. Special datatypes in python
+
+    Q: What is a set in python?
+    Ans: A set in Python is an unordered collection of unique elements. It is defined using curly braces {} or the set() constructor.
+    e.g. 
+        // my_set = {1,2,3}
+        // my_set = set(1, 2, 3)
+
+    
+    Q: What is dictionary in python?
+    Ans: A dictionary in Python is an unordered collection of key-value pairs. It is defined using curly braces {} or the dict() constructor.
+    e.g. 
+        // my_dict = {"name": "Manohar", "Why": "Cause I am awsome."}
+
+
+    Q: How do you access value in dictionary in Python?
+    Ans: You can access value in dictionary by using the corresponding key-
+    e.g.
+        // my_dict = {"name": "Manohar", "Why": "Cause I am awsome."}
+        // print(my_dict["name"]) # Manohar
+
+    Q: What is tuple in python?
+    Ans: A tuple in python is an order and immutable colloection of elements. It is defined using parantheses () or the tuple() constructor.
+    e.g.
+        // my_tup = (1, 2, 3,) 
+
+    Q: How do you swap the value of two variable in python without using tem variable in python.
+    Ans: You can swap the value of the two variable using a temporary or simultaneous assignment.
+
+        // a= 5
+        // b= 10
+        // a, b = b, a # 10, 5
+
+
+6. lambda functions, list comprehensions
+
+    Q: What is a lambda function in python?
+    Ans: A lambda function is an anonymous function defined using the lambda keyword. it is typically use for short, oneline functions.
+    e.g.
+        // sqaure = lambda x: x**2
+        // print(sqaure(3)) # 9
+
+
+    Q: What is list comprehension in python?
+    Ans: List comprehension is a concise way to create list in Python based on existing list or other iteratable. It combines the creation of a new list with a loop and optional conditional statement.
+    e.g.
+        // number = [1, 2, 3, 4]
+        // sqaure_number = [x**2 for x in number]
+        // print(sqaure_number) # [1, 4, 9, 16]
+
+    Q: How do you filter elements in a list using list comprehension?
+    Ans: You can filter elements in list using list comprehension by adding a conditional statement.
+    e.g.
+        // number = [1, 2, 3, 4, 5]
+        // even_number = [x for x in number if x % 2 == 0]
+        // print(sqaure_number) # [2, 4]
+
+    Q: Can you have multiple if condition in list comprehension?
+    Ans: Yess, you can have multiple if condition in list comprehension by chaining them using the and or or oprator.
+    e.g. 
+        // number = [1, 2, 3, 4, 5]
+        // even_number = [x for x in number if x % 2 == 0 and x> 2]
+        // print(sqaure_number) # [4]
+
+    Q: How do you create a dictionary using list comprehension?
+    Ans: You can create list using list comprehension by specifying key-value pairs within curly braces {}.
+    e.g. 
+        // key = ['a', 'b', 'c']
+        // value = [1, 2, 3]
+        // my_dict = [k: v for k, v in zip(key, value)]
+        // print(my_dict)  # {'a': 1, 'b':2, 'c':3}
+
+
+7. Libraries used for data science: pandas, numpy, seaborn, matplotlib
+
+    Q: How do you create a scatter plot using seaborn?
+    Ans: You can create a scatter plot using seaborn's scatterplot() function, specifying the x and y variables from your dataset.
+    e.g
+        // import seaborn as sns
+        // import pandas as pd
+        // df = pd.read_csv('data.csv')
+        //sns.scatterplot(x=x_columns, y=y_columns, data=df)
+
+
+8. Types of plots in seaborn and matplotlib and their usages
+
+    Q: What are some commonly used plot in seaborn and matplotlib?
+    Ans: Some commonly used plot in seaborn and matplotlib include.
+
+        1. Line plot: show the trend of a variable over time.
+
+        2. scatterplot: display the realations between two variables.
+
+        3. Bar plot: compares categories or group using rectangular bars.
+
+        4. Histogram: visualize the distribution of continous variable.
+
+        5. Box plot: represent the distribution of a variable and display outliers.
+
+        6. Heatmap: Shows correlation and realationship between two variable.
+
+        7. Violin Plot: combines a box plot and kernel density plot to represent the distribution of a variable.
+
+    Q: How do you create a box using matplotlib?
+    Ans: you can create box plot using matplotlib's boxplot() function, providing data and additional parameters.
+    e.g.
+        // import matplotlib.pyplot as plot
+        // import pandas as pd
+        // df =pd.read_csv(data.csv)
+        // plt.boxplot(df['column'])
+
+    Q: How do you create a Histogram using seaborn?
+    Ans: You can create Histogram using seaborn's displot() function, specifying the variable and any additional parameters.
+    e.g. 
+        // import seaborn as sns
+        // import pandas as pd
+        // df = pd.read_csv("data.csv")
+        // sns.displot(df["columns"])
+
+    
+    Q: How do you create a bar plot using matplotlib?
+    Ans: Uisng matplotlib's bar() or barh() functions, specifying data and any additional parameters.
+    e.g.
+        // import matplotlib.pyplot as plot
+        // import pandas as pd
+        // df =pd.read_csv("data.csv")
+        // plt.bor(df['x_columns'], df[y_columns])
+
+
+    Q: How do you create a Heatmap using seaborn?
+    Ans: Uisng seaborn's heatmap() functions, specifying data, row and column variable or any additional parameters.
+    e.g.
+        // import seaborn as sns
+        // import pandas as pd
+        // df = pd.read_csv("data.csv")
+        // sns.heatmap(data=df, x='x_column', y='y_column', cmap="coolwarm")
+
+9. Library for machine learning: Scikit-Learn
+
+    Q: What is Scikit-learn and how is it used in machine learning?
+    Ans: Scikit-learn is a popular machine learning library in Python that provide a wide range of algorithms and tool for various task such as classification, regressions, clustering, dimenstionality reductoin and model evaluation, it is widely used for building machine learning model and pipelines.
+
+
+    Q: How do you train a machine learning model using Scikit-learn?
+    Ans: To train a machine learning model using Scikit-learn you typically follow these steps:
+        1. Preprocess and prepare data
+        2. Choose a suitable algorithms.
+        3. split your data into training and testing set.
+        4. fit the model to the training data using the fit() method.
+        5. Evaluate the model's performance using metrics and test data.
+
+    Q: How do you use cross-validation in Scikit-learn?
+    Ans: Scikit-learn provide the cross_val_score() function to perform cross-validation. you can specify the desired number of folds and the scoring metrics to evaluate the model's performance.
+    e.g.
+        // from sklearn.model.selection import cross_val_score
+        // from sklearn.linear_model import LinearRegression
+        // model = LinearRegression()
+        // score = cross_val_score(model, X, Y, cv=5, scoring='r2')
+
+
+    Q: How do you make prediction using a trained model in Scikit-learn?
+    Ans: Once you, have trained a model in Scikit-learn you can make prediction on new data using the predict() method.
+    e.g. 
+        // model = LinearRegression()
+        // model.fit(X_train, Y_train)
+        // prediction = model.predict(x_data_tset)
+
+    Q: How do you save and load a trained model in Scikit-learn?
+    Ans: You can save a trained Scikit-learn model to disk using joblib module's dump() function. to load a saved model, you can use the load() function.
+    e.g.
+        // from sklearn.externals import joblib
+        // joblib.dump(model, "model.pkl")
+        //loaded_model = joblib.load("model.pkl")
